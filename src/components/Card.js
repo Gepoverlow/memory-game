@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Card = (props) => {
   const [isClicked, setIsClicked] = useState(false);
+
+  useEffect(() => {}, []);
 
   let content = (
     <React.Fragment>
