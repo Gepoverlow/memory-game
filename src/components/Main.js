@@ -1,5 +1,6 @@
 import { LOGICAL_OPERATORS } from "@babel/types";
 import React, { useState, useEffect } from "react";
+import Score from "./Score";
 import Card from "./Card";
 import Loading from "./Loading";
 
@@ -34,6 +35,7 @@ const Main = () => {
   };
 
   const fetchData = (url) => {
+    console.log("data fetched");
     setIsLoading(true);
     fetch(url)
       .then((response) => {
@@ -57,29 +59,41 @@ const Main = () => {
       });
   };
 
-  const handleClick = () => {
+  const handleClick = (value) => {
     const prevScore = score;
-    const updatedScore = prevScore + 1;
-    setScore(updatedScore);
+    const prevHiscore = hiscore;
+    if (!value) {
+      const updatedScore = prevScore + 1;
+      setScore(updatedScore);
+      if (updatedScore > prevHiscore) {
+        setHiscore(updatedScore);
+      }
+    } else {
+      setScore(0);
+      fetchData(`https://eldenring.fanapis.com/api/bosses?limit=100`);
+    }
   };
 
   let content = (
     <React.Fragment>
-      <div className="cards-container">
-        {isLoading ? (
-          <Loading />
-        ) : (
-          cards.map((card) => {
-            return (
-              <Card
-                key={card.id}
-                handleCardClick={handleClick}
-                name={card.name}
-                source={card.source}
-              ></Card>
-            );
-          })
-        )}
+      <div className="game-container">
+        <Score current={score} highest={hiscore} />
+        <div className="cards-container">
+          {isLoading ? (
+            <Loading />
+          ) : (
+            cards.map((card) => {
+              return (
+                <Card
+                  key={card.id}
+                  onClick={handleClick}
+                  name={card.name}
+                  source={card.source}
+                ></Card>
+              );
+            })
+          )}
+        </div>
       </div>
     </React.Fragment>
   );
