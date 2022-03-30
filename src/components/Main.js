@@ -35,7 +35,6 @@ const Main = () => {
   };
 
   const fetchData = (url) => {
-    console.log("data fetched");
     setIsLoading(true);
     fetch(url)
       .then((response) => {
