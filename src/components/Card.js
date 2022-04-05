@@ -15,7 +15,9 @@ const Card = (props) => {
       <div onClick={handleChangeState} className="card-container">
         <img className="card-image" src={props.source} alt={props.alt}></img>
         <br></br>
-        <span className="card-name">{props.name}</span>
+        <div className="name-container">
+          <span className="card-name">{props.name}</span>
+        </div>
       </div>
     </React.Fragment>
   );

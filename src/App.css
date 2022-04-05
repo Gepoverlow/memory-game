@@ -37,7 +37,7 @@ body {
 .card-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(150, 130, 130, 0.5);
   border-radius: 10px;
@@ -62,9 +62,12 @@ body {
   }
 }
 
-.card-container > span {
-  margin-top: 10px;
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: beige;
+  padding: 10px;
 }
 
 .loading {
