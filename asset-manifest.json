@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.5bfd1ff7.css",
+    "main.js": "/memory-game/static/js/main.beb3fc26.js",
+    "static/media/elden-ring-logo.jpg": "/memory-game/static/media/elden-ring-logo.43203d624bd3f6498a93.jpg",
+    "index.html": "/memory-game/index.html",
+    "main.5bfd1ff7.css.map": "/memory-game/static/css/main.5bfd1ff7.css.map",
+    "main.beb3fc26.js.map": "/memory-game/static/js/main.beb3fc26.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bfd1ff7.css",
+    "static/js/main.beb3fc26.js"
+  ]
+}
