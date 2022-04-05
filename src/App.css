@@ -42,7 +42,6 @@ body {
   border-radius: 10px;
   width: 280px;
   padding: 10px;
-  margin-top: 2rem;
 }
 
 .card-container:hover {
@@ -75,7 +74,8 @@ body {
   display: flex;
   flex-direction: row;
   color: rgb(70, 53, 37);
-  margin-top: 40px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   padding: 5px;
   background-color: rgba(230, 230, 230, 0.5);
   border-radius: 10px;
@@ -90,4 +90,41 @@ body {
 
 #score {
   margin-right: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin-top: 40px;
+
+  color: beige;
+}
+
+.footer > p > a {
+  position: relative;
+  color: beige;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  padding: 0px 10px;
+}
+
+.footer > p > a::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(255, 215, 0);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.footer > p > a:hover {
+  color: rgb(217, 247, 109);
+}
+
+.footer > p > a:hover:after {
+  width: 100%;
 }
