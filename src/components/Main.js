@@ -88,6 +88,7 @@ const Main = () => {
                   onClick={handleClick}
                   name={card.name}
                   source={card.source}
+                  alt={card.name}
                 ></Card>
               );
             })
